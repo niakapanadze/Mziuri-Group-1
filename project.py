@@ -29,7 +29,7 @@ def start_game():
     game_questions = random.sample(questions, k = len(questions))
 
     score = 100
-    display_welcome_art()
+    display_welcome()
 
     print("welcome! for quiting press 'quit'.")
 
@@ -51,7 +51,7 @@ def start_game():
                 break
             else:
                 score -= 10
-                print(f"incorrect -10 score. your scor now: {score}")
+                print(f"incorrect -10 score. Your score now: {score}")
                 print("try again or press 'quit'")
 
     print(f"\ncongratulations")
@@ -63,3 +63,25 @@ if choice == 'yes':
     start_game()
 else:
     print("bye, next time")
+
+#ASCII Art- funqcia dasasrulistvis(es pitonia)
+art2 = r"""
+        /^\/^\
+      _|__|  O|
+\/     /~     \_/ \
+ \____|__________/  \
+        \_______      \                  /\
+                `\     \                 \ \
+                  |     |                  \ \
+                  /      /                    \ \
+     ( )         /     /                       \ \
+      \ \       /      /                         \ \
+       \ \     /     /                            \  \
+        \   /     /             _----_            \   \
+         \/     /           _-~      ~-_         |   |
+         (      (        _-~    _--_    ~-_     _/   |
+          \      ~-____-~    _-~    ~-_    ~-_-~    /
+            ~-_           _-~          ~-_       _-~
+               ~--______-~                ~-___-~
+"""
+print(art2)
