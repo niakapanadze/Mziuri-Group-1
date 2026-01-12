@@ -29,6 +29,8 @@ def start_game():
     game_questions = random.sample(questions, k = len(questions))
 
     score = 100
+    streak = 0
+    #tu streak 3 gaxdeba mashin motamashes 10 qula emateba
     display_welcome()
 
     print("welcome! for quiting press 'quit'.")
@@ -48,14 +50,22 @@ def start_game():
             #pirobiTi operratorebi
             if user_input.lower() == q["answer"].lower():
                 print("correct, good job")
+                streak += 1
+                if streak == 3:
+                    score += 10
+                    print(f"\nYour streak just reached 3! +10 points!")
                 break
             else:
                 score -= 10
+                streak = 0
                 print(f"incorrect -10 score. Your score now: {score}")
                 print("try again or press 'quit'")
 
     print(f"\ncongratulations")
-    print(f"you ended questions, whole score: {score}")
+    if score <= 100:
+        print(f"You ended questions, whole score: {score}")
+    elif score > 100:
+        print(f"Your score with the streak bonus is above 100. It is: {score}")
 
 # tamshis dawyeba unda tu ara
 choice = input("do you want to play history? (yes/no): ").lower()
