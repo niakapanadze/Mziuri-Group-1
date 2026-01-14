@@ -67,15 +67,9 @@ def start_game():
     elif score > 100:
         print(f"Your score with the streak bonus is above 100. It is: {score}")
 
-# tamshis dawyeba unda tu ara
-choice = input("do you want to play history? (yes/no): ").lower()
-if choice == 'yes':
-    start_game()
-else:
-    print("bye, next time")
-
-#ASCII Art- funqcia dasasrulistvis(es pitonia)
-art2 = r"""
+def display_goodbye():
+    #ASCII Art - funqcia dasrulebistvis(es pitonia)
+    art2 = r"""
         /^\/^\
       _|__|  O|
 \/     /~     \_/ \
@@ -94,4 +88,12 @@ art2 = r"""
             ~-_           _-~          ~-_       _-~
                ~--______-~                ~-___-~
 """
-print(art2)
+    print(art2)
+    
+# tamshis dawyeba unda tu ara
+choice = input("do you want to play history? (yes/no): ").lower()
+if choice == 'yes':
+    start_game()
+else:
+    print("bye, next time")
+display_goodbye()
